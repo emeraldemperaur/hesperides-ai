@@ -157,6 +157,7 @@ const NotificationSystem = () => {
 
 #### Native Mobile Content Creator App
 
+
 ### System Architecture Design
 <ul>
 <li>
@@ -189,6 +190,7 @@ Server-Sent Events (SSE) implemented utilizing AWS Fargate and Amazon ECS (Elast
 </p>
 </li>
 </ul>
+
 
 ### Tool Stack
 
