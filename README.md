@@ -34,7 +34,7 @@ Video, Document or Output files) generated from the aforementioned AI services v
 
 <ul>
 <li><a href="#" target="_blank">Atlas Documentation</a></li>
-<ul>
+</ul>
 
 #### Verbs
 <table>
@@ -230,4 +230,4 @@ Server-Sent Events (SSE) implemented utilizing AWS Fargate and Amazon ECS (Elast
 <li><a href="https://docs.lumalabs.ai/docs/api" target="_blank">Luma Labs Dream Machine API</a></li>
 <li><a href="https://x.ai/api/imagine" target="_blank">Imagine API</a></li>
 <li><a href="https://docs.imagga.com/" target="_blank">Imagga API</a></li>
-<ul>
+</ul>
