@@ -157,7 +157,7 @@ const NotificationSystem = () => {
 
 #### Native Mobile Content Creator App
 
-### System Design & Architecture
+### System Architecture Design
 <ul>
 <li>
 <p align="justify">
