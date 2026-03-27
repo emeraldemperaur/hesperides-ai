@@ -117,8 +117,7 @@ Hesperides Polling Overview.
 
 #### Server-Sent Events (SSE)
 <p align="justify">
-Hesperides Server-Sent Events (SSE) Overview.
-</p>
+Implement Server-Sent Events (SSE) in React using the browser's built-in <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource" target="_blank">EventSource API</a> within a React component's <code>useEffect</code> hook</p>
 
 ```typescript
 // hooks/useSSE.ts
