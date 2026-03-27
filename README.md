@@ -86,7 +86,7 @@ Video, Document or Output files) generated from the aforementioned AI services v
 
 #### Hesperia Request
 <p align="justify">
-Hepsperides Request Overview.
+Hepsperia Request Overview.
 </p>
 
 ```json
@@ -108,7 +108,7 @@ npm install react@latest react-dom@latest sass@latest
 
 #### Asynchronous Polling
 <p align="justify">
-Hepsperides Polling Overview.
+Hesperides Polling Overview.
 </p>
 
 ```bash
