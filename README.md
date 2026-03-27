@@ -134,24 +134,33 @@ npm install react@latest react-dom@latest sass@latest
 ### System Design & Architecture
 <ol>
 <li>
-<strong>API Gateway & Router Lambda Layer:</strong> Secured entry point for dynamic Hesperia <em>verb</em> request. Requires valid Cognito JWT to access endpoint to ensure access to only authenticated users with an active subscription and available usage quota. Router Lambda inspects <em>verb</em> attribute in Hesperia request body and validates against a predefined JSON schema for the associated AI web services. All things considered, successful request schema validation initiates the execution of the Ladon AWS Step Function state machine and returns a <code>gardenJobId</code> to the user client.</li>
+<p>
+<strong>API Gateway & Router Lambda Layer:</strong> Secured entry point for dynamic Hesperia <em>verb</em> request. Requires valid Cognito JWT to access endpoint to ensure access to only authenticated users with an active subscription and available usage quota. Router Lambda inspects <em>verb</em> attribute in Hesperia request body and validates against a predefined JSON schema for the associated AI web services. All things considered, successful request schema validation initiates the execution of the Ladon AWS Step Function state machine and returns a <code>gardenJobId</code> to the user client.
+</p>
+</li>
 <li>
+<p>
 <strong>User Identity, Authentication, Authorization and Subscriptions Layer:</strong> Authentication strata manages creating and verifying user identities and active subscription. User sign-up, login and JSON Web Token generation facilitated by AWS Cognito User Pool. Crucially maps Cognito User IDs to respective Stripe CustomerIDs using DynamoDB table in tandem with Stripe Webhooks for subscription status and usage quota referencing.   
+</p>
 </li>
 <li>
+<p>
 <strong>API Orchestration Layer:</strong> Ladon orchestration engine core layer utilizes AWS Step Function to initialize a state machine with a 'choice' state that branches to a dedicated AI worker lambda function predicated on the <em>verb</em> attribute value provided in the Hesperia request object.
+</p>
 </li>
 <li>
+<p>
 <strong>Data Persistence & Storage Layer:</strong> AI Worker Lambdas securely store the final output files generated from respective AI web services. Request artifacts (i.e. Audio, Files, Images, Videos, Documents) are downloaded from AI web service provider and uploaded to AWS S3 bucket. Most importantly, the <code>gardenJob</code> status: <code>PENDING, COMPLETED, FAILED</code> and generated presigned S3 <code>articactUrl</code> for every Hesperia request is tracked & updated for referencing using DynamoDB table.
+</p>
 </li>
 <li>
+<p>
 <strong>Client Artifacts Retrieval Layer:</strong>Omnichannel client delivery strata provides developer-friendly interface to supports a range of distinct asset retrieval strategies: Asynchronous Polling, Webhooks and Server-Sent Events. 
 
 Webhooks implemented utilizing DynamoDB streams to detect a gardenJob's status change to <code>COMPLETED</code> and triggers a webhook notifier lambda function that sends a HTTP POST request directly to a specified callback server Url. 
 
 Server-Sent Events (SSE) implemented utilizing AWS Fargate and Amazon ECS (Elastic Container Service) in tandem with EventBridge to create a long-lived open HTTP client connection for a specific <code>gardenJob</code> and listen for a <code>COMPLETED</code> event to be emitted by the Ladon Orchestration Engine core layer's AWS Step Fucntion component. When a <code>COMPLETED</code> event is emitted for the specific <code>gardenJobId</code>, EventBridge push updates the generated Artificat's S3 presigned URL to the ECS container instance which relays the data directly to the browser through the open stream before closing the connection.
-
-
+</p>
 </li>
 </ol>
 
