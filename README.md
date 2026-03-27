@@ -102,8 +102,8 @@ Hepsperia Request Overview.
 Hepsperis Webhooks Overview.
 </p>
 
-```bash
-npm install react@latest react-dom@latest sass@latest
+```json
+{}
 ```
 
 #### Asynchronous Polling
@@ -111,13 +111,13 @@ npm install react@latest react-dom@latest sass@latest
 Hesperides Polling Overview.
 </p>
 
-```bash
-npm install react@latest react-dom@latest sass@latest
+```json
+{}
 ```
 
 #### Server-Sent Events (SSE)
 <p align="justify">
-Hepsperides Server-Sent Events (SSE) Overview.
+Hesperides Server-Sent Events (SSE) Overview.
 </p>
 
 ```bash
