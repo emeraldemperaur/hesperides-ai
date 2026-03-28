@@ -91,6 +91,7 @@ Hepsperia Request Overview.
 {
   "verb": "IDEATE",
   "context": "From the perspective of a <insert context noun>. Help me develop a...",
+  "webhookUrl": null,
   "contextFiles": []
 }
 ```
