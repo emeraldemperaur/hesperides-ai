@@ -5,7 +5,7 @@
 
 ### Synopsis
 <p align="justify">
-A cloud native API orchestration web serrvice application for subscribed users to conveniently utilize popular creative productivity AI models or API web services proffered
+Cloud native API orchestration web serrvice application for subscribed users to conveniently utilize popular creative productivity AI models or API web services proffered
 by xAI, Perplexity, Speechify, Luma Labs (Dream Machine), Midjourney, Imagga and more.
 </p>
 
@@ -186,7 +186,9 @@ const NotificationSystem = () => {
 
 Webhooks implemented utilizing DynamoDB streams to detect a gardenJob's status change to <code>COMPLETED</code> and triggers a webhook notifier lambda function that sends a HTTP POST request directly to a specified callback server Url. 
 
-Server-Sent Events (SSE) implemented utilizing AWS Fargate and Amazon ECS (Elastic Container Service) in tandem with EventBridge to create a long-lived open HTTP client connection for a specific <code>gardenJob</code> and listen for a <code>COMPLETED</code> event to be emitted by the Ladon Orchestration Engine core layer's AWS Step Fucntion component. When a <code>COMPLETED</code> event is emitted for the specific <code>gardenJobId</code>, EventBridge push updates the generated Artificat's S3 presigned URL to the ECS container instance which relays the data directly to the browser through the open stream before closing the connection.
+Server-Sent Events (SSE) implemented utilizing AWS Fargate and Amazon ECS (Elastic Container Service) in tandem with EventBridge to create a long-lived open HTTP client connection for a specific <code>gardenJob</code> and listen for a <code>COMPLETED</code> event to be emitted by the Ladon Orchestration Engine core layer's AWS Step Fucntion component. 
+
+When a <code>COMPLETED</code> event is emitted for the specific <code>gardenJobId</code>, EventBridge push updates the generated Artificat's S3 presigned URL to the ECS container instance which relays the data directly to the browser through the open stream before closing the connection.
 </p>
 </li>
 </ul>
