@@ -5,13 +5,12 @@
 
 ### Synopsis
 <p align="justify">
-Cloud native API orchestration web serrvice application for subscribed users to conveniently utilize popular creative productivity AI models or API web services proffered
+Cloud native API orchestration web service application for subscribed users to conveniently utilize popular creative productivity AI models or API web services proffered
 by xAI, Perplexity, Speechify, Luma Labs (Dream Machine), Midjourney, Imagga and more.
 </p>
 
 <p align="justify">
-Its raison d'être is to provide imaginative developers with a scalable, production-ready aggregrator resource to store and retrieve artifcats & assets (i.e. Text, Image, Audio,
-Video, Document or Output files) generated from the aforementioned AI services via a unified endpoint(s) for DX convenience and cost consolidation.
+Its raison d'être is to provide imaginative developers with a scalable, production-ready aggregator resource to store and retrieve artifacts & assets (i.e. Text, Image, Audio, Video, Document or Output files) generated from the aforementioned AI services via a unified endpoint(s) for DX convenience and cost consolidation.
 </p>
 
 ### Core Features
