@@ -5,8 +5,7 @@
 
 ### Synopsis
 <p align="justify">
-Cloud native API orchestration web service application for subscribed users to conveniently utilize popular creative productivity AI models or API web services proffered
-by xAI, Perplexity, Speechify, Luma Labs (Dream Machine), Midjourney, Imagga and more.
+Cloud Native API orchestration web service application for subscribed users to conveniently utilize popular creative productivity AI models or API web services proffered by xAI, Perplexity, Speechify, Luma Labs (Dream Machine), Midjourney, Imagga and more.
 </p>
 
 <p align="justify">
