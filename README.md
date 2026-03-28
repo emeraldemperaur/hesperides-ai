@@ -1,7 +1,7 @@
 # Hesperidesᴬᴵ
 ## Cloud Native API Orchestration Web Service Application (AWS)
 ![Changesets](https://img.shields.io/badge/maintained%20with-changesets-176de3?style=flat-square&logo=changesets&logoColor=white) 
-[![Release Status](https://github.com/emeraldemperaur/vector-sigma/actions/workflows/release.yml/badge.svg)](https://github.com/emeraldemperaur/vector-sigma/actions)
+
 
 ### Synopsis
 <p align="justify">
