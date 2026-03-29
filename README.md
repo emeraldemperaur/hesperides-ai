@@ -137,11 +137,11 @@ export const useSSE = (url) => {
 
 ```typescript
 // component/NotificationUI.tsx
-import { useSSE } from '../hooks/useSSE';
+import { useSSE } from '@emeraldemperaur/hesperides-seeds';
 
 const NotificationSystem = () => {
   // Call the hook with SSE endpoint (e.g. api/sse-notifications)
-  const { data, isConnected } = useSSE('http://localhost:6669/api/sse-notifications');
+  const { data, isConnected, readyState, error } = useSSE('http://localhost:6669/api/sse-notifications/{gardenJobId}');
 
   return (
     // Render connection status and data
