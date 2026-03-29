@@ -119,27 +119,10 @@ Hesperides Polling Overview.
 Implement Server-Sent Events (SSE) in React using the browser's built-in <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource" target="_blank">EventSource API</a> within a React component's <code>useEffect</code> hook</p>
 
 ```typescript
-// hooks/useSSE.ts
-import { useState, useEffect } from 'react';
-
-// Define hook to manage EventSource lifecycle
-export const useSSE = (url) => {
-  const [data, setData] = useState(null);
-  // ... state management for isConnected and error
-  
-  useEffect(() => {
-    // Initialize EventSource, attach listeners, and handle cleanup
-  }, [url]);
-
-  return { data, isConnected, error };
-};
-```
-
-```typescript
 // component/NotificationUI.tsx
 import { useSSE } from '@emeraldemperaur/hesperides-seeds';
 
-const NotificationSystem = () => {
+const HesperidesArtifactUI = () => {
   // Call the hook with SSE endpoint (e.g. api/sse-notifications)
   const { data, isConnected, readyState, error } = useSSE('http://localhost:6669/api/sse-notifications/{gardenJobId}', { eventType: 'message'});
 
