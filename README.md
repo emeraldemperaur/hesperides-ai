@@ -141,7 +141,7 @@ import { useSSE } from '@emeraldemperaur/hesperides-seeds';
 
 const NotificationSystem = () => {
   // Call the hook with SSE endpoint (e.g. api/sse-notifications)
-  const { data, isConnected, readyState, error } = useSSE('http://localhost:6669/api/sse-notifications/{gardenJobId}');
+  const { data, isConnected, readyState, error } = useSSE('http://localhost:6669/api/sse-notifications/{gardenJobId}', { eventType: 'message'});
 
   return (
     // Render connection status and data
